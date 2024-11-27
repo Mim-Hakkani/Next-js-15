@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Header = () => {
@@ -34,21 +35,25 @@ const Header = () => {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl">NextJS 15</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
+      <li><Link href="/basic-routing/news">News</Link></li>
       <li>
         <details>
-          <summary>Parent</summary>
+          <summary>News-1</summary>
           <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><Link href={`/basic-routing/products/${1}`}>Sports</Link></li>
+            <li><Link href={`/basic-routing/products/${2}`}>Politices</Link></li>
+            <li><Link href={`/basic-routing/products/${3}`}>International</Link></li>
+           
           </ul>
         </details>
       </li>
-      <li><a>Item 3</a></li>
+      <li><Link href={`/dashboard/admin`}>Admin Dashboard</Link></li>
+      <li><Link href={`/dashboard/user/`}>User Dashboard</Link></li>
+
     </ul>
   </div>
   <div className="navbar-end">
